@@ -1,0 +1,35 @@
+{
+  "name": "gulp-simple-inject",
+  "version": "0.0.0",
+  "description": "Gulp plugin for injecting JS and CSS file references into html files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rydahhh/gulp-simple-inject.git"
+  },
+  "keywords": [
+    "gulpplugin",
+    "gulp",
+    "plugin",
+    "inject",
+    "references",
+    "js",
+    "css",
+    "script",
+    "link",
+    "html",
+    "index.html",
+    "tag",
+    "tags",
+    "simple"
+  ],
+  "author": "Ryan Helmoski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rydahhh/gulp-simple-inject/issues"
+  },
+  "homepage": "https://github.com/rydahhh/gulp-simple-inject#readme"
+}
