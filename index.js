@@ -35,7 +35,7 @@ function transform(file, enc, cb) {
         globals.jsRefs = `${globals.jsRefs}<script src="${relativePath}"></script>`;
         this.push(file);
     } else if(ext === '.css') {
-        globals.cssRefs = `${globals.cssRefs}<link type="stylesheet" type="text/css" href="${relativePath}" />`;
+        globals.cssRefs = `${globals.cssRefs}<link rel="stylesheet" type="text/css" href="${relativePath}" />`;
         this.push(file);
     } else {
         this.push(file);

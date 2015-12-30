@@ -50,7 +50,7 @@ describe("The gulp-simple-inject plugin", () => {
         injector.end();
         injector.on('data', file => {
             if(path.extname(file.path) === '.html') {
-                expect(file.contents.toString('utf8')).toMatch(/.*<link type="stylesheet" type="text\/css" href="test1.css" \/><link type="stylesheet" type="text\/css" href="test2.css" \/>.*/);
+                expect(file.contents.toString('utf8')).toMatch(/.*<link rel="stylesheet" type="text\/css" href="test1.css" \/><link rel="stylesheet" type="text\/css" href="test2.css" \/>.*/);
                 done();
             }
         });
@@ -63,7 +63,7 @@ describe("The gulp-simple-inject plugin", () => {
         injector.end();
         injector.on('data', file => {
             if(path.extname(file.path) === '.html') {
-                expect(file.contents.toString('utf8')).not.toMatch(/.*<link type="stylesheet" type="text\/css" href="test.css" \/>.*<script src="test.js"><\/script>.*/);
+                expect(file.contents.toString('utf8')).not.toMatch(/.*<link rel="stylesheet" type="text\/css" href="test.css" \/>.*<script src="test.js"><\/script>.*/);
                 done();
             }
         });
@@ -80,7 +80,7 @@ describe("The gulp-simple-inject plugin", () => {
         injector.on('data', file => {
             if(path.extname(file.path) === '.html') {
                 numHtmlFilesProcessed++;
-                expect(file.contents.toString('utf8')).toMatch(/.*<link type="stylesheet" type="text\/css" href="test.css" \/>.*<script src="test.js"><\/script>.*/);
+                expect(file.contents.toString('utf8')).toMatch(/.*<link rel="stylesheet" type="text\/css" href="test.css" \/>.*<script src="test.js"><\/script>.*/);
                 if(numHtmlFilesProcessed == 2) {
                     done();
                 }
@@ -102,7 +102,7 @@ describe("The gulp-simple-inject plugin", () => {
             injector.end();
             injector.on('data', file => {
                 if(path.extname(file.path) === '.html') {
-                    expect(file.contents.toString('utf8')).toMatch(/.*<link type="stylesheet" type="text\/css" href="test.css" \/>.*<script src="test.js"><\/script>.*/);
+                    expect(file.contents.toString('utf8')).toMatch(/.*<link rel="stylesheet" type="text\/css" href="test.css" \/>.*<script src="test.js"><\/script>.*/);
                     done();
                 }
             });
