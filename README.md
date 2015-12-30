@@ -2,7 +2,8 @@
 
 > Gulp plugin for injecting JS and CSS file references into html files.
 
-[![Build Status](https://travis-ci.org/rydahhh/gulp-simple-inject.svg?branch=master)](https://travis-ci.org/rydahhh/gulp-simple-inject) [![Coverage Status](https://coveralls.io/repos/rydahhh/gulp-simple-inject/badge.svg?branch=master&service=github)](https://coveralls.io/github/rydahhh/gulp-simple-inject?branch=master)
+[![Build Status](https://travis-ci.org/rydahhh/gulp-simple-inject.svg?branch=master)](https://travis-ci.org/rydahhh/gulp-simple-inject) [![Coverage Status](https://coveralls.io/repos/rydahhh/gulp-simple-inject/badge.svg?branch=master&service=github)](https://coveralls.io/github/rydahhh/gulp-simple-inject?branch=master) [![Dependency Status](https://david-dm.org/rydahhh/gulp-simple-inject
+.svg)](https://david-dm.org/rydahhh/gulp-simple-inject)
 
 This plugin takes in a stream of js, css, and html files; and injects the js and css file references into placeholders in the html files.
 
