@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "stable"
-  - "4"
-after_success: 
-  coveralls
+    - "stable"
+    - "4"
+env:
+    - TRAVIS=1
