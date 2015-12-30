@@ -1,6 +1,6 @@
 {
   "name": "gulp-simple-inject",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Gulp plugin for injecting JS and CSS file references into html files.",
   "main": "index.js",
   "scripts": {
