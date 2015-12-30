@@ -4,9 +4,9 @@
   "description": "Gulp plugin for injecting JS and CSS file references into html files.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node node_modules/jasmine-node/bin/jasmine-node spec --noStack"
   },
-  "repository": {
+  "repository": { 
     "type": "git",
     "url": "git+https://github.com/rydahhh/gulp-simple-inject.git"
   },
@@ -36,5 +36,9 @@
     "gulp-util": "^3.0.7",
     "stream-replace": "^1.0.0",
     "through2": "^2.0.0"
+  },
+  "devDependencies": {
+    "jasmine-node": "^1.14.5",
+    "vinyl": "^1.1.0"
   }
 }
