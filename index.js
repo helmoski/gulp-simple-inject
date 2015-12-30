@@ -20,15 +20,15 @@ function inject(options) {
     if(util.isObject(options) && util.isString(options.cwd)) {
         globals.cwd = path.resolve(globals.cwd, options.cwd);
     }
-    
+
     return through.obj(transform, end);
 }
 
 function transform(file, enc, cb) {
     var ext = path.extname(file.path),
         relativePath = path.relative(globals.cwd, file.path);
-    
-    if(file.isNull) {
+
+    if(file.isNull()) {
         this.push(file);
     } else if(ext === '.html') {
         globals.htmlFiles.push(file);
