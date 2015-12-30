@@ -2,6 +2,8 @@
 
 > Gulp plugin for injecting JS and CSS file references into html files.
 
+[![Build Status][travis-image]][travis-url]
+
 This plugin takes in a stream of js, css, and html files; and injects the js and css file references into placeholders in the html files.
 
 ### Installation
