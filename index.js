@@ -8,26 +8,25 @@ var through = require('through2'),
     util = require('util'),
     path = require('path');
 
-// Global variables
-var globals = {
-    cwd: process.cwd(),
-    htmlFiles: [],
-    cssRefs: "",
-    jsRefs: ""
-};
+var globals;
 
 function inject(options) {
+    globals = {
+        cwd: process.cwd(),
+        htmlFiles: [],
+        cssRefs: "",
+        jsRefs: ""
+    };
+    
     if(util.isObject(options) && util.isString(options.cwd)) {
         globals.cwd = path.resolve(globals.cwd, options.cwd);
     }
-
     return through.obj(transform, end);
 }
 
 function transform(file, enc, cb) {
     var ext = path.extname(file.path),
         relativePath = path.relative(globals.cwd, file.path);
-
     if(file.isNull()) {
         this.push(file);
     } else if(ext === '.html') {
@@ -47,7 +46,6 @@ function transform(file, enc, cb) {
 
 function end(cb) {
     var promises = [];
-    
     for(var htmlFile of globals.htmlFiles) {
         promises.push(injectTags(htmlFile));
     }
