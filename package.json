@@ -31,5 +31,10 @@
   "bugs": {
     "url": "https://github.com/rydahhh/gulp-simple-inject/issues"
   },
-  "homepage": "https://github.com/rydahhh/gulp-simple-inject#readme"
+  "homepage": "https://github.com/rydahhh/gulp-simple-inject#readme",
+  "dependencies": {
+    "gulp-util": "^3.0.7",
+    "stream-replace": "^1.0.0",
+    "through2": "^2.0.0"
+  }
 }
