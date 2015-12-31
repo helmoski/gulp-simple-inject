@@ -4,3 +4,7 @@ node_js:
     - "4"
 env:
     - TRAVIS=1
+notifications:
+    email:
+        on_success: change
+        on_failure: change
