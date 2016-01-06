@@ -93,7 +93,7 @@ The content of the `app` directory will now have been copied over to the `dist` 
 </head>
 <body>
     <h1>Test</h1>
-    <style src="app.js"></style><style src="test/test.js"></style>
+    <script src="app.js"></script><script src="test/test.js"></script>
 </body>
 </html>
 ```
