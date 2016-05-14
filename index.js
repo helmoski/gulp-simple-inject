@@ -27,7 +27,7 @@ function inject(options) {
 function transform(file, enc, cb) {
     var ext = path.extname(file.path),
         relativePath = path.relative(globals.cwd, file.path);
-    if(file.isNull()) {
+    if(file.isNull() || file.contents.length === 0) {
         this.push(file);
     } else if(ext === '.html') {
         globals.htmlFiles.push(file);
