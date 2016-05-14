@@ -70,7 +70,7 @@ var gulp = require('gulp'),
 gulp.task('default', () => {
     return gulp.src('app/**/*')
         .pipe(inject({cwd:'app'}))
-        .dest('dist');
+        .pipe(gulp.dest('dist'));
 });
 ```
 
