@@ -87,6 +87,17 @@ describe("The gulp-simple-inject plugin", () => {
             }
         });
     });
+
+    it('should not break on an empty html file', done => {
+        injector.write(getEmptyFile('empty-file'));
+        injector.end();
+
+        injector.on('data', () => {});
+
+        injector.on('end', data => {
+            done();
+        });
+    });
     
     describe('with the cwd option specified', () => {
         var injector;
@@ -115,6 +126,13 @@ function getHtmlFile(name) {
         path: `${cwd}/${name}.html`,
         contents: new Buffer("<!DOCTYPE><html><head><title>Test</title><!-- inject:css --></head><body><h1>Test</h1><!-- inject:js --></body></html>", "utf8")
     });   
+}
+
+function getEmptyFile(name) {
+    return new File({
+        path: `${cwd}/${name}.html`,
+        contents: new Buffer("", "utf8")
+    });
 }
 
 function getHtmlFileWithoutInjectTags(name) {
